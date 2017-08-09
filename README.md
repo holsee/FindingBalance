@@ -13,7 +13,7 @@ Given a list of integer values, find the position in the list where the sum of t
 
 Note: The value at the pivot (index) is included as a value on the right hand side.
 
-### Example: Even List
+#### Example: Even List
 
 ```
  0  1  2  3  4  5  6  7
@@ -22,7 +22,7 @@ Note: The value at the pivot (index) is included as a value on the right hand si
 ```
 Pivot at index: 4.
 
-### Example: Odd List
+#### Example: Odd List
 
 ```
  0  1  2 
@@ -31,17 +31,17 @@ Pivot at index: 4.
 ```
 Pivot at index: 2
 
-## Easy Mode: No Natural Balance Point? Quit!
+### Easy Mode: No Natural Balance Point? Quit!
 
 If there is no natural balanced index, return something that indicates that.
 E.g. `{error, unbalanced}`
 
 
-## Hard Mode: Super Bonus Edge Cases
+### Hard Mode: Super Bonus Edge Cases
 
 Finding the sub-index balance point.
 
-### Example: Odd List with Center Balanced
+#### Example: Odd List with Center Balanced
 
 ```
  0  1  2
