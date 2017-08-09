@@ -18,7 +18,7 @@ Note: The value at the pivot (index) is included as a value on the right hand si
 ```
  0  1  2  3  4  5  6  7
 [1, 2, 3, 4, 4, 3, 2, 1]
-           ^
+            ^
 ```
 Pivot at index: 4.
 
@@ -27,7 +27,7 @@ Pivot at index: 4.
 ```
  0  1  2 
 [1, 1, 2]
-       ^   
+      ^   
 ```
 Pivot at index: 2
 
@@ -46,7 +46,7 @@ Finding the sub-index balance point.
 ```
  0  1  2
 [1, 2, 1]
-	^
+    ^
 ```
 Pivot at index: 1.5 
 
