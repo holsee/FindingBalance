@@ -1,21 +1,51 @@
 # Balance
 
-**TODO: Add description**
+``` elixir
 
-## Installation
+   describe "easy mode" do
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `balance` to your list of dependencies in `mix.exs`:
+    doctest Balance
 
-```elixir
-def deps do
-  [
-    {:balance, "~> 0.1.0"}
-  ]
-end
+    test "Even List" do
+      assert Balance.find([1, 2, 3, 4, 4, 3, 2, 1]) == 4
+    end
+
+    test "Odd List" do
+      assert Balance.find([1, 1, 2]) == 2
+    end
+
+    test "Odd List with Center Balanced" do
+      assert Balance.find([1, 2, 1]) == {:error, :unbalanced}
+    end
+
+    test "No Natural Pivot Point" do
+      assert Balance.find([1, 1, 1000, 1]) == {:error, :unbalanced}
+    end
+
+  end
+
+  describe "hard mode" do
+
+    doctest BalanceExact
+
+    test "Even List" do
+      assert BalanceExact.find([1, 2, 3, 4, 4, 3, 2, 1]) == 4
+    end
+
+    test "Odd List" do
+      assert BalanceExact.find([1, 1, 2]) == 2
+    end
+
+    test "Odd List with Center Balanced" do
+      assert BalanceExact.find([1, 2, 1]) == 1.5
+    end
+
+    test "No Natural Pivot Point" do
+      assert BalanceExact.find([1, 1, 1000, 1]) == 2.499
+    end
+
+ end
+
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/balance](https://hexdocs.pm/balance).
 
