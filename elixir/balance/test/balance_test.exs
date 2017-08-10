@@ -13,7 +13,7 @@ defmodule BalanceTest do
       assert Balance.find([1, 1, 2]) == 2
     end
 
-   test "Odd List with Center Balanced" do
+    test "Odd List with Center Balanced" do
       assert Balance.find([1, 2, 1]) == {:error, :unbalanced}
     end
 
